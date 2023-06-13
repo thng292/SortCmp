@@ -53,11 +53,11 @@ def compileAndRun(compiler, inputSize, times, timeout):
 
 
 def main() :
-    parser = argparse.ArgumentParser(description='Generate random test and test all file in the directory')
+    parser = argparse.ArgumentParser(description='Generate random test and test all c file in the ./src directory', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--compiler', type=str, default="gcc", help='Compiler to use')
-    parser.add_argument('--times', type=int, default="10", help='Run the test n times')
+    parser.add_argument('--times', type=int, default="10", help='Run the test n times for each file and take the average')
     parser.add_argument('--timeout', type=float, default="1", help='Timeout for each test')
-    parser.add_argument('--inputSize', type=str, default=",".join([str(1_000_000*i) for i in range(1, 11)]), help='Input size for each test, format: 1,2,3,4,5 (comma separated))')
+    parser.add_argument('--inputSize', type=str, default=",".join([str(1_000_000*i) for i in range(1, 11)]), help='Input size for each test, format: 1,2,3,4,5 (comma separated)')
     args = parser.parse_args()
 
     inputSize = [int(i) for i in args.inputSize.split(",")]
