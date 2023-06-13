@@ -1,6 +1,7 @@
 # SortCmp
 
-```usage: test.py [-h] [--compiler COMPILER] [--times TIMES] [--timeout TIMEOUT]
+```
+usage: test.py [-h] [--compiler COMPILER] [--times TIMES] [--timeout TIMEOUT]
                [--inputSize INPUTSIZE]
 
 Generate random test and test all c file in the ./src directory
